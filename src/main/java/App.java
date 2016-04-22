@@ -22,7 +22,9 @@ public class App {
     get("/results", (request, response) -> {
       Map<String, Object> model new HashMap<String, Object>();
       model.put("results", "templates/results.vtl");
-      
+
+      String inputWords = request.queryParams("userNumber");
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
