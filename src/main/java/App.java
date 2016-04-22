@@ -29,5 +29,17 @@ public class App {
       model.put("results", results);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/guess", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/guess.vtl");
+
+      String userGuess = request.queryParams("userGuess");
+      String inputWords = request.queryParams("userInput");
+
+      model.put("userGuess", userGuess);
+      model.put("inputWords", inputWords);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
