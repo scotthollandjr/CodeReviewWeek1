@@ -31,4 +31,11 @@ public class CodeReviewWeek1Test {
     String expected = "b";
     assertEquals(expected, testCodeReview.runCodeReview("b"));
   }
+
+  @Test
+  public void runCodeReview_fullSentence_String() {
+    CodeReviewWeek1 testCodeReview = new CodeReviewWeek1();
+    String expected = "- h-p- - p-ss";
+    assertEquals(expected, testCodeReview.runCodeReview("I hope I pass"));
+  }
 }
