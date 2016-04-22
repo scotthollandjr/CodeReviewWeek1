@@ -25,6 +25,9 @@ public class App {
 
       String inputWords = request.queryParams("userNumber");
 
+      CodeReviewWeek1 newCodeReview = new CodeReviewWeek1();
+      String results = newCodeReview.runCodeReview(inputWords);
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
