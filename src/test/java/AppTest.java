@@ -21,4 +21,32 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Let's create a puzzle!");
   }
+
+  @Test
+  public void resultsTest() {
+    goTo("http://localhost:4567/");
+    fill("#inputWord").with("Appa");
+    submit(".btn");
+    assertThat(pageSource()).contains("-pp-");
+  }
+
+  @Test
+  public void guessTest() {
+    goTo("http://localhost:4567/");
+    fill("#inputWord").with("Appa");
+    submit(".btn");
+    fill("#userGuess").with("Appa");
+    submit(".btn");
+    assertThat(pageSource()).contains("You are correct!");
+  }
+
+  @Test
+  public void guessFailTest() {
+    goTo("http://localhost:4567/");
+    fill("#inputWord").with("Appa");
+    submit(".btn");
+    fill("#userGuess").with("Poopa");
+    submit(".btn");
+    assertThat(pageSource()).contains("Sorry, that is incorrect!");
+  }
 }
