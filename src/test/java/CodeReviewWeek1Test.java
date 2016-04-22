@@ -18,4 +18,10 @@ public class CodeReviewWeek1Test {
     assertEquals(expected, testCodeReview.runCodeReview("a"));
   }
 
+  @Test
+  public void runCodeReview_replaceDoubleletter_hyphenhyphen() {
+    CodeReviewWeek1 testCodeReview = new CodeReviewWeek1();
+    String expected = "--";
+    assertEquals(expected, testCodeReview.runCodeReview("ae"));
+  }
 }
