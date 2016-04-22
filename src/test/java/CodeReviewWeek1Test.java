@@ -24,4 +24,11 @@ public class CodeReviewWeek1Test {
     String expected = "--";
     assertEquals(expected, testCodeReview.runCodeReview("ae"));
   }
+
+  @Test
+  public void runCodeReview_replaceNonVowel_String() {
+    CodeReviewWeek1 testCodeReview = new CodeReviewWeek1();
+    String expected = "b";
+    assertEquals(expected, testCodeReview.runCodeReview("b"));
+  }
 }

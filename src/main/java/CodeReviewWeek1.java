@@ -20,7 +20,11 @@ public class CodeReviewWeek1 {
     String puzzledString = new String();
 
     for (String letter : arrayWords) {
+      if (vowelReplace.get(letter) != null) {
       puzzledString += vowelReplace.get(letter);
-    } return puzzledString;
-  }
+    } else {
+      puzzledString += letter;
+    }
+  } return puzzledString;
+}
 }
