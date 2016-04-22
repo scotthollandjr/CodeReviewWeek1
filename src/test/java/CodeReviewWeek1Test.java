@@ -49,7 +49,7 @@ public class CodeReviewWeek1Test {
   @Test
   public void runCodeReview_SymbolsAsWell_String() {
     CodeReviewWeek1 testCodeReview = new CodeReviewWeek1();
-    String expected = "-p-c && -d-s!";
-    assertEquals(expected, testCodeReview.runCodeReview("Epic && Odus!"));
+    String expected = "--p-c && -d-s!";
+    assertEquals(expected, testCodeReview.runCodeReview("-Epic && Odus!"));
   }
 }
