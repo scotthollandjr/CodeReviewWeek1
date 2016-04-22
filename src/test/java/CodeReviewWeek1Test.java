@@ -11,4 +11,11 @@ public class CodeReviewWeek1Test {
     assertEquals(expected, testCodeReview.runCodeReview(""));
   }
 
+  @Test
+  public void runCodeReview_replaceSingleletter_hyphen() {
+    CodeReviewWeek1 testCodeReview = new CodeReviewWeek1();
+    String expected = "-";
+    assertEquals(expected, testCodeReview.runCodeReview("a"));
+  }
+
 }
