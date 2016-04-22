@@ -14,19 +14,19 @@ public class App {
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
-
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("/results", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("results", "templates/results.vtl");
+      model.put("template", "templates/results.vtl");
 
-      String inputWords = request.queryParams("userNumber");
+      String inputWords = request.queryParams("userInput");
 
       CodeReviewWeek1 newCodeReview = new CodeReviewWeek1();
       String results = newCodeReview.runCodeReview(inputWords);
 
+      model.put("results", results);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
