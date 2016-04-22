@@ -1,14 +1,14 @@
 <h1>Did you guess correctly?</h1>
 
-#if ($userGuess == $userInput)
+#if ($userGuess == $word)
 <h3>You are correct!</h3>
-<h3>The correct answer was $userInput</h3>
+<h3>The answer was $word</h3>
 #else
 <h3>Sorry, that is incorrect!</h3>
-<h3>The correct answer was $userInput</h3>
+<h3>The correct answer was $word</h3>
 #end
 
-<form action="/" medthod="get">
+<form action="/" method="get">
   <h4>Wanna make another puzzle?</h4>
   <button type="submit" class="btn btn-link">Back home</button>
 </form>

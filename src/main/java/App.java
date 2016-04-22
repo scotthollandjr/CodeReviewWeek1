@@ -13,18 +13,21 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("word", request.session().attribute("word"));
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/results", (request, response) -> {
+    post("/results", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/results.vtl");
 
-      String inputWords = request.queryParams("userInput");
+      String userInput = request.queryParams("word");
+      request.session().attribute("word", userInput);
+      model.put("word", userInput);
 
       CodeReviewWeek1 newCodeReview = new CodeReviewWeek1();
-      String results = newCodeReview.runCodeReview(inputWords);
+      String results = newCodeReview.runCodeReview(userInput);
 
       model.put("results", results);
       return new ModelAndView(model, layout);
@@ -33,12 +36,13 @@ public class App {
     get("/guess", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/guess.vtl");
+      request.session().attribute("word");
 
       String userGuess = request.queryParams("userGuess");
-      String inputWords = request.queryParams("userInput");
+      String original = request.session().attribute("word");
 
       model.put("userGuess", userGuess);
-      model.put("inputWords", inputWords);
+      model.put("word", request.session().attribute("word"));
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }

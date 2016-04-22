@@ -1,3 +1,12 @@
 <h1>Can you solve this puzzle?</h1>
 
-<h3>$results</h3>
+<div id="results">
+  <h3>$results</h3>
+</div>
+<form action="/guess" method="get">
+  <div class="form-group">
+    <label for="userGuess">Enter your guess:</label>
+    <input name="userGuess" id="userGuess">
+  </div>
+  <button type="submit" class="btn btn-success">See results!</button>
+</form>

@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class CodeReviewWeek1 {
 
-  public String runCodeReview(String inputWords) {
+  public String runCodeReview(String word) {
     HashMap<String, String> vowelReplace = new HashMap<String, String>();
     vowelReplace.put("a", "-");
     vowelReplace.put("A", "-");
@@ -16,7 +16,7 @@ public class CodeReviewWeek1 {
     vowelReplace.put("u", "-");
     vowelReplace.put("U", "-");
 
-    String[] arrayWords = inputWords.split("");
+    String[] arrayWords = word.split("");
     String puzzledString = new String();
 
     for (String letter : arrayWords) {

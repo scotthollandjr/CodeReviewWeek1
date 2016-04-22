@@ -1,8 +1,11 @@
 <h1>Let's create a puzzle!</h1>
-<form action='/results' method='get'>
+<div>
+  <p>Enter a word or string, and it will be turned into a challenging puzzle! Then pass to a friend and see if they can solve your puzzle! So fun!</p>
+</div>
+<form action="/results" method="post" id="word">
   <div class="form-group">
-    <label for="userInput">Enter a word or phrase:</label>
-    <input name="userInput" id="userInput">
+    <label for="word">Word or phrase:</label>
+    <input name="word" type="text">
   </div>
-  <button type="submit" class="btn">Puzzle It!</button>
+  <button type="submit" class="btn btn-success">Puzzle It!</button>
 </form>
