@@ -39,7 +39,7 @@ public class App {
       request.session().attribute("word");
 
       String userGuess = request.queryParams("userGuess");
-      String original = request.session().attribute("word");
+      // String original = request.session().attribute("word");
 
       model.put("userGuess", userGuess);
       model.put("word", request.session().attribute("word"));
