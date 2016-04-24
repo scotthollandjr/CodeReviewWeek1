@@ -1,3 +1,26 @@
-html {
-  background-color: #F0FFF0;
+body {
+  background-color: #dff7df;
+}
+
+h1 {
+  text-align: center;
+}
+
+.formDiv {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #f4fbf4;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+#results {
+  background-color: #f0f0ff;
+  text-align: center;
+  width: 60%;
+  padding: 1px;
+  border: 2px solid #f2ecfe;
+  margin: 0 auto;
+  margin-bottom: 5px;
 }

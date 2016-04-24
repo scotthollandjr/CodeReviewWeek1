@@ -1,12 +1,18 @@
 <h1>Can you solve this puzzle?</h1>
-
-<div id="results">
-  <h3>$results</h3>
+<div class="col-md-3">
 </div>
-<form action="/guess" method="get">
-  <div class="form-group">
-    <label for="userGuess">Enter your guess:</label>
-    <input name="userGuess" id="userGuess">
+<div class="formDiv col-md-6">
+  <div id="results">
+    <h3>$results</h3>
   </div>
-  <button type="submit" class="btn btn-success">See results!</button>
-</form>
+  <br>
+  <form action="/guess" method="get">
+    <div class="form-group">
+      <label for="userGuess">Enter your guess:</label>
+      <input name="userGuess" id="userGuess">
+    </div>
+    <button type="submit" class="btn btn-success">See results!</button>
+  </form>
+</div>
+<div class="col-md-3">
+</div>

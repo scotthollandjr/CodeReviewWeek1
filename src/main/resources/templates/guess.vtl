@@ -1,14 +1,23 @@
 <h1>Did you guess correctly?</h1>
-
-#if ($userGuess == $word)
-<h3>You are correct!</h3>
-<h3>The answer was $word</h3>
-#else
-<h3>Sorry, that is incorrect!</h3>
-<h3>The correct answer was $word</h3>
-#end
-
-<form action="/" method="get">
-  <h4>Wanna make another puzzle?</h4>
-  <button type="submit" class="btn btn-link">Back home</button>
-</form>
+<div class="col-md-3">
+</div>
+<div class="formDiv col-md-6">
+  #if ($userGuess == $word)
+  <h3>You are correct!</h3>
+  <p>The answer was:</p>
+  <h3>"$word"</h3>
+  #else
+  <h3>Sorry, that is incorrect!</h3>
+  <p>Your guess was:</p>
+  <h2>"$userGuess"</h2>
+  <p>And the correct answer was:</p>
+  <h2>"$word"</h2>
+  #end
+<br>
+  <form action="/" method="get">
+    <h4>Wanna make another puzzle?</h4>
+    <button type="submit" class="btn btn-link">Back home</button>
+  </form>
+</div>
+<div class="col-md-3">
+</div>

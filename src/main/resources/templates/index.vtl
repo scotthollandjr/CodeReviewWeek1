@@ -1,11 +1,18 @@
 <h1>Let's create a puzzle!</h1>
-<div>
-  <p>Enter a word or string, and it will be turned into a challenging puzzle! Then pass to a friend and see if they can solve your puzzle! So fun!</p>
+<div class="col-md-3">
 </div>
-<form action="/results" method="post" id="word">
-  <div class="form-group">
-    <label for="word">Word or phrase:</label>
-    <input name="word" type="text" id="inputWord">
+<div class="formDiv col-md-6">
+  <div>
+    <p>Enter a word or string, and it will be turned into a challenging puzzle! Then pass to a friend and see if they can solve your puzzle! So fun!</p>
   </div>
-  <button type="submit" class="btn btn-success">Puzzle It!</button>
-</form>
+  <br>
+  <form action="/results" method="post" id="word">
+    <div class="form-group">
+      <label for="word">Word or phrase:</label>
+      <input name="word" type="text" id="inputWord">
+    </div>
+    <button type="submit" class="btn btn-success">Puzzle It!</button>
+  </form>
+</div>
+<div class="col-md-3">
+</div>
