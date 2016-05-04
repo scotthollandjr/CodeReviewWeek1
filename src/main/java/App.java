@@ -26,8 +26,8 @@ public class App {
       request.session().attribute("word", userInput);
       model.put("word", userInput);
 
-      CodeReviewWeek1 newCodeReview = new CodeReviewWeek1();
-      String results = newCodeReview.runCodeReview(userInput);
+      VowelReplace newVowelReplace = new VowelReplace();
+      String results = newVowelReplace.runVowelReplace(userInput);
 
       model.put("results", results);
       return new ModelAndView(model, layout);
