@@ -1,4 +1,4 @@
-# _BDD Independent project_
+# _Word Puzzle_
 
 ##### _4/22/2016_
 
